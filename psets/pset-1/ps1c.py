@@ -30,13 +30,11 @@ amount_saved = lambda r: initial_deposit*((1+(r/12))**months)
 max_saved_amount = amount_saved(1)
 
 if initial_deposit >= down_payment-100:
-    r = 0.0
-    steps = 0
+    pass
 else:
     while abs(amount_saved(r)-down_payment) >= epsilon:
         if int(amount_saved(r)) == int(max_saved_amount):
-            # it is impossible to save within $100 of the required
-            # down payment in 3 years given ID and r
+            # it is impossible to save within $100 of the required down payment in 3 years given ID and r
             r = None
             steps = 0
             break
