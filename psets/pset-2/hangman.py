@@ -54,8 +54,11 @@ def has_player_won(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed,
         False otherwise
     """
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
+    # Player wins if there is no secret word
+    for c in secret_word:
+        if c not in letters_guessed:
+            return False
+    return True
 
 
 def get_word_progress(secret_word, letters_guessed):
