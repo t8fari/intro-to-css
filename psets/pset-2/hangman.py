@@ -70,8 +70,13 @@ def get_word_progress(secret_word, letters_guessed):
     returns: string, comprised of letters and asterisks (*) that represents
         which letters in secret_word have not been guessed so far
     """
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
+    word = ''
+    for c in secret_word:
+        if c in letters_guessed:
+            word += c
+        else:
+            word += '*'
+    return word
 
 
 def get_available_letters(letters_guessed):
